@@ -8,41 +8,41 @@ public class News {
     private String cotent;
     private int deptid;
 
-    public News(String wriitenBy, String cotent, int deptid) {
+    private News(String wriitenBy, String cotent, int deptid) {
         this.wriitenBy = wriitenBy;
         this.cotent = cotent;
         this.deptid = deptid;
     }
 
-    public int getId() {
+    private int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
-    public String getWriitenBy() {
+    private String getWriitenBy() {
         return wriitenBy;
     }
 
-    public void setWriitenBy(String wriitenBy) {
+    private void setWriitenBy(String wriitenBy) {
         this.wriitenBy = wriitenBy;
     }
 
-    public String getCotent() {
+    private String getCotent() {
         return cotent;
     }
 
-    public void setCotent(String cotent) {
+    private void setCotent(String cotent) {
         this.cotent = cotent;
     }
 
-    public int getDeptid() {
+    private int getDeptid() {
         return deptid;
     }
 
-    public void setDeptid(int deptid) {
+    private void setDeptid(int deptid) {
         this.deptid = deptid;
     }
 
