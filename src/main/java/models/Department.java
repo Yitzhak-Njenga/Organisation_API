@@ -8,4 +8,11 @@ public class Department {
     private String description;
     private String deptname;
     private int empnumber;
+
+    public Department(String description, String deptname, int empnumber) {
+        this.description = description;
+        this.deptname = deptname;
+        this.empnumber = empnumber;
+    }
 }
+
