@@ -14,5 +14,7 @@ public class Department {
         this.deptname = deptname;
         this.empnumber = empnumber;
     }
+
+
 }
 
