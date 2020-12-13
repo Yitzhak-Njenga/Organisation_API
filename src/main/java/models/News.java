@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class News {
     private int id;
     private String wriitenBy;
@@ -42,5 +44,21 @@ public class News {
 
     public void setDeptid(int deptid) {
         this.deptid = deptid;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        News news = (News) o;
+        return id == news.id &&
+                deptid == news.deptid &&
+                Objects.equals(wriitenBy, news.wriitenBy) &&
+                Objects.equals(cotent, news.cotent);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, wriitenBy, cotent, deptid);
     }
 }
