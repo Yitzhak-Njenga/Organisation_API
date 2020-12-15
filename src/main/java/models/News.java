@@ -8,7 +8,7 @@ public class News {
     private String cotent;
     private int deptid;
 
-    private News(String wriitenBy, String cotent, int deptid) {
+    News(String wriitenBy, String cotent, int deptid) {
         this.wriitenBy = wriitenBy;
         this.cotent = cotent;
         this.deptid = deptid;
@@ -22,19 +22,19 @@ public class News {
         this.id = id;
     }
 
-    private String getWriitenBy() {
+    String getWriitenBy() {
         return wriitenBy;
     }
 
-    private void setWriitenBy(String wriitenBy) {
+    void setWriitenBy(String wriitenBy) {
         this.wriitenBy = wriitenBy;
     }
 
-    private String getCotent() {
+    String getCotent() {
         return cotent;
     }
 
-    private void setCotent(String cotent) {
+    void setCotent(String cotent) {
         this.cotent = cotent;
     }
 
