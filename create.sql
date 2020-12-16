@@ -1,5 +1,6 @@
+CREATE DATABASE oraganisation;
 
-
+\c oraganisation;
 
 CREATE TABLE IF NOT EXISTS departments(
  id int PRIMARY KEY ,
