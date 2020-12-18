@@ -1,44 +1,44 @@
 package models;
 
-import com.sun.org.apache.xpath.internal.objects.XString;
+
 
 import java.util.Objects;
 
 public class Department {
 
     private int id;
-    private String description;
-    private String deptname;
-    private int empnumber;
+    private String dept_description ;
+    private String dept_deptname ;
+    private int  dept_empnumber ;
 
-    public Department(String description, String deptname, int empnumber) {
-        this.description = description;
-        this.deptname = deptname;
-        this.empnumber = empnumber;
+    public Department(String dept_description , String dept_deptname , int  dept_empnumber ) {
+        this.dept_description  = dept_description ;
+        this.dept_deptname  = dept_deptname ;
+        this. dept_empnumber  =  dept_empnumber ;
     }
 
-    public String getDescription() {
-        return description;
+    public String getdept_description () {
+        return dept_description ;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setdept_description (String dept_description ) {
+        this.dept_description  = dept_description ;
     }
 
-    public String getDeptname() {
-        return deptname;
+    public String getdept_deptname () {
+        return dept_deptname ;
     }
 
-    public void setDeptname(String deptname) {
-        this.deptname = deptname;
+    public void setdept_deptname (String dept_deptname ) {
+        this.dept_deptname  = dept_deptname ;
     }
 
-    public int getEmpnumber() {
-        return empnumber;
+    public int getdept_empnumber () {
+        return  dept_empnumber ;
     }
 
-    public void setEmpnumber(int empnumber) {
-        this.empnumber = empnumber;
+    public void setdept_empnumber (int  dept_empnumber ) {
+        this. dept_empnumber  =  dept_empnumber ;
     }
 
     public int getId() {
@@ -55,14 +55,14 @@ public class Department {
         if (o == null || getClass() != o.getClass()) return false;
         Department that = (Department) o;
         return id == that.id &&
-                empnumber == that.empnumber &&
-                Objects.equals(description, that.description) &&
-                Objects.equals(deptname, that.deptname);
+                 dept_empnumber  == that. dept_empnumber  &&
+                Objects.equals(dept_description , that.dept_description ) &&
+                Objects.equals(dept_deptname , that.dept_deptname );
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, description, deptname, empnumber);
+        return Objects.hash(id, dept_description , dept_deptname ,  dept_empnumber );
     }
 }
 

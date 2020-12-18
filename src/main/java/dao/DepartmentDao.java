@@ -5,7 +5,7 @@ import models.Department;
 import java.util.List;
 
 
-public interface OrargisationDao  {
+public interface DepartmentDao {
     void save(Department department);
 
     List<Department> allDepartments();

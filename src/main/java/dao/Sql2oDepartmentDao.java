@@ -6,13 +6,13 @@ import org.sql2o.Sql2o;
 
 import java.util.List;
 
-public class Sql2oOrganisationDao implements OrargisationDao  {
+public class Sql2oDepartmentDao implements DepartmentDao {
 
 
     private final Sql2o sql2o;
 
 
-    public Sql2oOrganisationDao(Sql2o sql2o) {
+    public Sql2oDepartmentDao(Sql2o sql2o) {
 
         this.sql2o = sql2o;
 
@@ -23,7 +23,7 @@ public class Sql2oOrganisationDao implements OrargisationDao  {
     @Override
     public void save(Department department) {
 
-        String sql = "INSERT INTO departments(dept_description, dept_deptname, dept_empnumber) VALUES(:description :dept_deptname :empnumber)";
+        String sql = "INSERT INTO departments(dept_description, dept_deptname, dept_empnumber) VALUES(:dept_description, :dept_deptname,  :dept_empnumber)";
         try (Connection connection = sql2o.open()) {
             int id = (int) connection.createQuery(sql, true)
                     .bind(department)

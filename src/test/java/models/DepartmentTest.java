@@ -26,28 +26,28 @@ public class DepartmentTest {
 
     @Test
     public void getEmpNumber_departmentInstantiatesWithEmpNumber_true() {
-        assertEquals(32,setUpDept().getEmpnumber());
+        assertEquals(32,setUpDept().getdept_empnumber());
     }
 
     @Test
     public void setDeptName_true() {
         Department testDept = setUpDept();
-        testDept.setDeptname("HR");
-        assertNotEquals("Accounts",testDept.getDeptname());
+        testDept.setdept_deptname("HR");
+        assertNotEquals("Accounts",testDept.getdept_deptname());
     }
 
     @Test
     public void setDescription_true() {
         Department testDept = setUpDept();
-        testDept.setDescription("Money");
-        assertNotEquals("Deals with money",testDept.getDescription());
+        testDept.setdept_description("Money");
+        assertNotEquals("Deals with money",testDept.getdept_description());
     }
 
     @Test
     public void setEmpNumber_true() {
         Department testDept = setUpDept();
-        testDept.setEmpnumber(43);
-        assertNotEquals(32,testDept.getEmpnumber());
+        testDept.setdept_empnumber(43);
+        assertNotEquals(32,testDept.getdept_empnumber());
     }
 
 }
