@@ -11,14 +11,13 @@ CREATE TABLE IF NOT EXISTS departments(
 CREATE TABLE IF NOT EXISTS news(
 id serial PRIMARY KEY ,
 writtenby VARCHAR,
-content VARCHAR,
-deptid INTEGER);
+content VARCHAR);
+
 
 CREATE TABLE IF NOT EXISTS users(
 id serial PRIMARY KEY ,
 name VARCHAR,
 position VARCHAR,
-deptid INTEGER,
 roles VARCHAR);
 
 CREATE DATABASE organisation_test WITH TEMPLATE organisation;

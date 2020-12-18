@@ -20,7 +20,7 @@ public class Sql2oUsersDao implements UsersDao {
 
     @Override
     public void save(Users users) {
-        String sql = "INSERT INTO users(name, position, deptid, roles) VALUES(:name, :position, :deptid, :roles)";
+        String sql = "INSERT INTO users(name, position, roles) VALUES(:name, :position, :roles)";
         try (Connection connection = sql2o.open()) {
             int id = (int) connection.createQuery(sql, true)
                     .bind(users)
@@ -36,7 +36,11 @@ public class Sql2oUsersDao implements UsersDao {
 
     @Override
     public List<Users> allUsers() {
-        return null;
+        String sql ="SELECT * FROM users";
+        try(Connection connection= sql2o.open()){
+            return connection.createQuery(sql)
+                    .executeAndFetch(Users.class);
+    }
     }
 
     @Override

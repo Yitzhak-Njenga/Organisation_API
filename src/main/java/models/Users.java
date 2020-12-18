@@ -7,30 +7,19 @@ public class Users {
     private int id;
     private String name;
     private String position;
-    private int deptId;
     private String roles;
 
-
-    public Users(String name, String position, int deptId, String roles) {
+    public Users(String name, String position, String roles) {
         this.name = name;
         this.position = position;
-        this.deptId = deptId;
         this.roles = roles;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
+    public String getname() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setname(String name) {
         this.name = name;
     }
 
@@ -42,14 +31,6 @@ public class Users {
         this.position = position;
     }
 
-    public int getDeptId() {
-        return deptId;
-    }
-
-    public void setDeptId(int deptId) {
-        this.deptId = deptId;
-    }
-
     public String getRoles() {
         return roles;
     }
@@ -58,13 +39,18 @@ public class Users {
         this.roles = roles;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Users users = (Users) o;
         return id == users.id &&
-                deptId == users.deptId &&
                 Objects.equals(name, users.name) &&
                 Objects.equals(position, users.position) &&
                 Objects.equals(roles, users.roles);
@@ -72,6 +58,8 @@ public class Users {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, position, deptId, roles);
+        return Objects.hash(id, name, position, roles);
     }
 }
+
+

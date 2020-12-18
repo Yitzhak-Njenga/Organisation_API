@@ -18,7 +18,7 @@ public class UsersTest {
     }
 
     public Users setUpUser() {
-        return new Users("Yitzhak","CE0",6,"employ");
+        return new Users("Yitzhak","CEO","manager");
     }
 
     @Test
@@ -29,30 +29,30 @@ public class UsersTest {
 
     @Test
     public void getName_userInstantiatesWithName_true() {
-        assertEquals("Fancy", setUpUser().getName());
+        assertEquals("Yitzhak", setUpUser().getname());
     }
 
     @Test
     public void getPosition_userInstantiatesWithUserposition_true() {
-        assertEquals("Manager", setUpUser().getPosition());
+        assertEquals("Ceo", setUpUser().getPosition());
     }
 
     @Test
     public void getRoles_userInstantiatesWithUserRoles_true() {
-        assertEquals("govern", setUpUser().getRoles());
+        assertEquals("employ", setUpUser().getRoles());
     }
 
     @Test
     public void setName_true() {
         Users testUser = setUpUser();
-        testUser.setName("Britney");
-        assertNotEquals("Fancy", testUser.getName());
+        testUser.setname("Britney");
+        assertNotEquals("Fancy", testUser.getname());
     }
 
     @Test
     public void setPosition_true() {
         Users testUser = setUpUser();
-        testUser.setPosition("General Manager");
+        testUser.setPosition("");
         assertNotEquals("Manager", testUser.getPosition());
     }
 
